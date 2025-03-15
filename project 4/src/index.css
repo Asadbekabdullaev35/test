@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+/* Gradient animation */
+.gradient-animate {
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Matrix-inspired grid background */
+.matrix-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 255, 170, 0.15) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Neon glow effects */
+.neon-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.5),
+               0 0 20px rgba(0, 255, 170, 0.3),
+               0 0 30px rgba(0, 255, 170, 0.2);
+}
+
+.neon-box {
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.5),
+              0 0 20px rgba(0, 255, 170, 0.3),
+              inset 0 0 10px rgba(0, 255, 170, 0.2);
+}
+
+/* Pulse animation for accents */
+@keyframes neonPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
